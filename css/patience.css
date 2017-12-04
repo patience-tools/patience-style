@@ -1,0 +1,13 @@
+@import url(normalize.css);
+@import url(hack.css);
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=patience.css.map */
