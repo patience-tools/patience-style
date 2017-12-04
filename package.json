@@ -2,7 +2,6 @@
   "name": "patience-style",
   "version": "1.0.0",
   "description": "Unified styling for the Patience platform",
-  "main": "index.js",
   "repository": "https://github.com/patience-tools/patience-style.git",
   "author": "catlover91 <7215827+CatLover91@users.noreply.github.com>",
   "license": "MIT",
@@ -20,20 +19,14 @@
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix",
     "build-autoprefix": "postcss --use autoprefixer --map false --output css/patience.css css/patience.css",
     "build-clean": "rimraf css",
-    "build-sass": "node-sass --output-style expanded --source-map true patience.sass css/patience.css",
-    "deploy": "npm run build && npm run docs",
-    "docs": "npm run docs-sass && npm run docs-autoprefix",
-    "docs-autoprefix": "postcss --use autoprefixer --map false --output docs/css/patience-docs.css docs/css/patience-docs.css",
-    "docs-sass": "node-sass --output-style expanded docs/patience-docs.sass docs/css/patience-docs.css",
-    "start": "npm run build-sass -- --watch",
-    "start-docs": "npm run docs-sass -- --watch",
-    "start-test": "npm run test-sass -- --watch",
-    "test-sass": "node-sass --output-style expanded docs/patience-test.sass docs/css/patience-test.css"
+    "build-sass": "node-sass --output-style expanded --source-map true patience.scss css/patience.css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch"
   },
   "files": [
     "css",
-    "sass",
-    "patience.sass",
+    "scss",
+    "patience.scss",
     "LICENSE",
     "README.md"
   ]
